@@ -12,8 +12,8 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  WECHAT_IMAGE: ${{ github.repository_owner }}/wechat-on-cloud
-  PANEL_IMAGE: ${{ github.repository_owner }}/woc-panel
+  WECHAT_IMAGE: ${{ github.repository_owner }}/wechat-on-cloud-hq
+  PANEL_IMAGE: ${{ github.repository_owner }}/woc-panel-hq
 
 jobs:
   build:
