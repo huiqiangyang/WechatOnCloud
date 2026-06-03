@@ -67,6 +67,7 @@ const app = Fastify({ logger: true, trustProxy: true });
 await app.register(cookie);
 // 文件上传走原始二进制（前端以 application/octet-stream 直传 File）
 app.addContentTypeParser('application/octet-stream', { parseAs: 'buffer' }, (_req, body, done) => done(null, body));
+app.addContentTypeParser('*', (_req, _payload, done) => done(null, {})); 
 
 // ---------- 鉴权辅助 ----------
 function currentUser(req: FastifyRequest): User | null {
